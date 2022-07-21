@@ -1,0 +1,30 @@
+@import '_colors';
+
+//кнопочка 'вверх'
+#top { 
+    text-align: right;
+    position: fixed; //двигается вместе с экраном
+    right: 5px; //от правого угла
+    top: 5px; //от верхнего угла
+
+    a {
+        color: white;
+        font-size: 50px
+    }
+}
+
+footer {
+    text-align: center;
+    background-color: $Bordo; // тёмно-красный
+    color: white;
+
+    ul {
+        list-style: none;
+    }
+
+    li {
+        display: inline-block; //горизонтальный список
+        padding: 10px;
+        text-align: left;
+    }
+}

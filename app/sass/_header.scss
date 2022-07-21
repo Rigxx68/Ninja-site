@@ -1,0 +1,80 @@
+@import '_colors';
+
+.container {
+    display: flex;
+    align-items: center; //вертикально
+    justify-content: center; //горизонтально
+    margin: 0 auto;
+    font-size: 30px;
+    background-color: $DarkRed;
+}
+
+//знак ниндзя
+.znak {
+    margin: 10px 0 5px; 
+}
+
+//каждая кнопка
+.feature {
+    padding: 10px;
+
+    a:hover {
+        color: $GreyBlue;
+    }
+}
+
+@mixin decor() {
+    color: black;
+    text-decoration: none; // Убирает подчеркивание для ссылок
+}
+
+//ссылки
+a {
+    @include decor()
+}
+
+//кнопка "информация"
+.btn { 
+    cursor: pointer;
+    border: none;
+    background-color: $DarkRed;
+    font-size: 30px;
+}
+
+.dropdown {
+    //position: relative;
+
+    a:hover {
+        color: black; //чтобы цвет букв был чёрный а не как у feature hover голубой
+    }
+
+    &:hover .btn { // цвет букв кнопки раскрывающегося списка когда список раскрывается
+        color: $GreyBlue;
+    }
+
+    &:hover .dropdown-content { // Показать выпадающее меню при наведении курсора 
+        display: block;
+    }
+}
+
+// Выпадающее содержимое (скрыто по умолчанию)
+.dropdown-content {
+    display: none;
+    position: absolute;
+    text-align: left;
+    overflow: auto; //содержимое выпадающего списка. Полосы прокрутки - при необходимости
+    z-index: 1; //контент закрывает собой тот, что за ним
+    background-color: $DarkRed;
+    padding-top: 20px;
+    font-size: 25px;
+
+    a {
+        @include decor();
+        display: block;
+        padding: 5px 10px;
+        //Изменение цвета выпадающих ссылок при наведении курсора
+        &:hover {
+            background-color: $GreyBlue
+        }
+    }
+}

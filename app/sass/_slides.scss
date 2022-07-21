@@ -1,0 +1,78 @@
+@import '_colors';
+
+//общий блок
+.slider { 
+    position: relative; // Положение элемента устанавливается относительно его исходной позиции
+    margin: 30px 180px 0; //блок в центре(auto)
+    padding-bottom: 20px; //отступ для тени (1)
+    height: 320px;
+    text-align: center;
+    overflow: hidden; //спрячем остальные картинки
+}
+
+//картинки
+.slider .item img { 
+    height: 320px;
+    box-shadow: 10px 10px 5px 5px rgba(grey, 0.6); //тень от картинки
+			//по Х, по У, размытие, растяжение, цвет, прозрачность
+    margin-bottom: 20px; //отступ для тени (2)
+}
+
+// стрелки назад и вперёд
+.slider .previous, .slider .next {
+    cursor: pointer; //курсор пальчиком
+    position: absolute; //плавающее местоположение
+    top: 50%; //посередние от верхней границы
+    margin-top: -55px; //чтобы посередине вертикали
+    padding: 15px; //от стрелки до края её фона
+    // Оформление самих кнопок 
+    color: white;
+    font-weight: bold;
+    font-size: 40px;
+    transition: 0.6s ease; //фон появляется медленно, разгоняется быстро и замедляется в конце
+    // При наведении курсора на стрелки добавляем фон кнопок
+
+    &:hover { 
+        background-color: $LightGrey; 
+    }
+
+}
+
+//левая стрелка
+.slider .previous {
+    left: 0; //расстояние от левого края
+    border-radius: 0 3px 3px 0; // Скругление правых границ
+}
+
+//правая стрелка
+.slider .next {
+    right: 0; //расстояние от правого края
+    border-radius: 3px 0 0 3px; // Скругление левых границ
+}
+
+
+// Кружочки
+.slider-dots {
+    text-align: center;
+    margin: 10px
+}
+
+.slider-dots_item {
+    cursor: pointer;
+    height: 12px;
+    width: 12px;
+    margin: 0 2px;
+    background-color: grey;
+    border-radius: 50%;
+    display: inline-block;
+    transition: 0.6s ease; //фон появляется медленно, разгоняется быстро и замедляется в конце
+    
+    &:hover {
+        background-color: $DarkRed;
+    }
+}
+
+.active {
+    background-color: $DarkRed; 
+}
+

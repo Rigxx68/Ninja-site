@@ -1,0 +1,64 @@
+@import '_colors';
+
+//чтобы красивые подчеркивания были
+@mixin td_all() { 
+    padding: 10px 15px;
+    border-bottom: 1px solid;
+}
+
+//название таблицы
+caption { 
+    font-size: 22px;
+    padding: 10px
+}
+
+table {
+    border-collapse: collapse; //убираем пустые промежутки между ячейками
+}
+
+.table1, .table2 {
+    margin: 0 50px 0 100px;
+}
+
+.table3, .table4 {
+    margin: 0 100px 0 50px;
+}
+
+.table1, .table3 {
+
+    //строка светится
+    tr:hover td { 
+        background: $LightGreyBlue;
+    }
+
+    //строка шапки
+    th {
+        @include td_all();
+        border-bottom-color: black; //нижние подчеркивания
+        text-align: left;
+    }
+
+    td {
+        @include td_all();
+        border-bottom-color: $DarkGrey; 
+    }
+}
+
+.table2, .table4 {
+
+    //строка светится
+    tr:hover td { 
+        background: $LightRed; //карминный
+    }
+
+    th {
+        @include td_all();
+        border-bottom-color: $DarkBordo;
+        text-align: left;
+    }
+
+    td {
+        @include td_all();
+        border-bottom-color: $Bordo;
+    }
+}

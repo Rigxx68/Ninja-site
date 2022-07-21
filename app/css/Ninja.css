@@ -1,0 +1,280 @@
+@charset "UTF-8";
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  font-size: 30px;
+  background-color: #d2363e;
+}
+
+.znak {
+  margin: 10px 0 5px;
+}
+
+.feature {
+  padding: 10px;
+}
+.feature a:hover {
+  color: #d2dada;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+.btn {
+  cursor: pointer;
+  border: none;
+  background-color: #d2363e;
+  font-size: 30px;
+}
+
+.dropdown a:hover {
+  color: black;
+}
+.dropdown:hover .btn {
+  color: #d2dada;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  text-align: left;
+  overflow: auto;
+  z-index: 1;
+  background-color: #d2363e;
+  padding-top: 20px;
+  font-size: 25px;
+}
+.dropdown-content a {
+  color: black;
+  text-decoration: none;
+  display: block;
+  padding: 5px 10px;
+}
+.dropdown-content a:hover {
+  background-color: #d2dada;
+}
+
+caption {
+  font-size: 22px;
+  padding: 10px;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+.table1, .table2 {
+  margin: 0 50px 0 100px;
+}
+
+.table3, .table4 {
+  margin: 0 100px 0 50px;
+}
+
+.table1 tr:hover td, .table3 tr:hover td {
+  background: #e8edff;
+}
+.table1 th, .table3 th {
+  padding: 10px 15px;
+  border-bottom: 1px solid;
+  border-bottom-color: black;
+  text-align: left;
+}
+.table1 td, .table3 td {
+  padding: 10px 15px;
+  border-bottom: 1px solid;
+  border-bottom-color: #969696;
+}
+
+.table2 tr:hover td, .table4 tr:hover td {
+  background: #e64a52;
+}
+.table2 th, .table4 th {
+  padding: 10px 15px;
+  border-bottom: 1px solid;
+  border-bottom-color: #400000;
+  text-align: left;
+}
+.table2 td, .table4 td {
+  padding: 10px 15px;
+  border-bottom: 1px solid;
+  border-bottom-color: #800000;
+}
+
+.slider {
+  position: relative;
+  margin: 30px 180px 0;
+  padding-bottom: 20px;
+  height: 320px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.slider .item img {
+  height: 320px;
+  box-shadow: 10px 10px 5px 5px rgba(128, 128, 128, 0.6);
+  margin-bottom: 20px;
+}
+
+.slider .previous, .slider .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  margin-top: -55px;
+  padding: 15px;
+  color: white;
+  font-weight: bold;
+  font-size: 40px;
+  transition: 0.6s ease;
+}
+.slider .previous:hover, .slider .next:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.slider .previous {
+  left: 0;
+  border-radius: 0 3px 3px 0;
+}
+
+.slider .next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.slider-dots {
+  text-align: center;
+  margin: 10px;
+}
+
+.slider-dots_item {
+  cursor: pointer;
+  height: 12px;
+  width: 12px;
+  margin: 0 2px;
+  background-color: grey;
+  border-radius: 50%;
+  display: inline-block;
+  transition: 0.6s ease;
+}
+.slider-dots_item:hover {
+  background-color: #d2363e;
+}
+
+.active {
+  background-color: #d2363e;
+}
+
+#top {
+  text-align: right;
+  position: fixed;
+  right: 5px;
+  top: 5px;
+}
+#top a {
+  color: white;
+  font-size: 50px;
+}
+
+footer {
+  text-align: center;
+  background-color: #800000;
+  color: white;
+}
+footer ul {
+  list-style: none;
+}
+footer li {
+  display: inline-block;
+  padding: 10px;
+  text-align: left;
+}
+
+html {
+  scroll-behavior: smooth;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font: 18px sans-serif;
+}
+
+.nazv {
+  font-size: 50px;
+  text-align: center;
+  padding: 70px 0;
+  background-image: url("C:/Users/Диана/Documents/Ninja/app/img/katana1.jpg");
+}
+
+h3 {
+  text-align: center;
+  text-indent: 0px;
+  padding-top: 20px;
+  font-size: 25px;
+  margin: 0;
+}
+
+.wrapper {
+  background-color: #d2dada;
+}
+
+.wrapper2 {
+  background-color: #d2363e;
+}
+
+.Oninja {
+  padding: 20px 50px;
+  text-align: justify;
+  text-indent: 30px;
+  color: white;
+  background-image: url(C:/Users/Диана/Documents/Ninja/app/img/nin1.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.Onas {
+  padding: 20px 50px;
+  text-align: justify;
+}
+
+.grid-cont0 {
+  background-image: url("C:/Users/Диана/Documents/Ninja/app/img/katana.jpg");
+  box-shadow: 20px 20px 20px 0px rgb(190, 190, 190);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-column-gap: 50px;
+  grid-row-gap: 30px;
+  padding: 30px;
+  margin: 20px 100px 0;
+}
+
+.grid-cont {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 10px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin: 0 100px;
+}
+
+.grid-cont2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  padding: 30px;
+  margin: 0 150px;
+}
+
+.img {
+  width: 80%;
+  height: auto;
+  box-shadow: 10px 10px 5px 5px rgba(128, 128, 128, 0.6);
+}

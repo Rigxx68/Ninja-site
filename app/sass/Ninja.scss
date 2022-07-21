@@ -1,0 +1,100 @@
+@import '_colors';
+@import '_header';
+@import '_table';
+@import '_slides';
+@import '_footer';
+
+html {
+	scroll-behavior: smooth; //плавная прокрутка страницы при нажатии на "вверх"
+	height: 100%
+}
+
+body {
+	margin: 0;
+	font: 18px sans-serif;
+}
+
+//слова на сером фоне с катаной под шапкой
+.nazv { 
+	font-size: 50px;
+	text-align: center;
+	padding: 70px 0;
+	background-image: url("C:/Users/Диана/Documents/Ninja/app/img/katana1.jpg")
+}
+
+//названия в начале блоков
+h3 {
+	text-align: center;
+	text-indent: 0px;
+	padding-top: 20px;
+	font-size: 25px;
+	margin: 0;
+}
+
+//синий фон
+.wrapper{ 
+		background-color: $GreyBlue;
+}
+
+//красный фон
+.wrapper2 { 
+	background-color: $DarkRed;
+}
+
+//черный фон с ниндзя
+.Oninja { 
+	padding: 20px 50px;
+	text-align: justify; //по ширине
+	text-indent: 30px;
+	color: white; 
+	background-image: url(C:/Users/Диана/Documents/Ninja/app/img/nin1.jpg);
+	background-size: cover; //=100% auto
+	background-attachment: fixed; //картинка стоит на месте, текст двигается
+}
+
+//блок с книжкой с белой тенью
+.Onas{ 
+	padding: 20px 50px;
+	text-align: justify;
+}
+
+//книжка с белой тенью
+.grid-cont0 { 
+	background-image: url("C:/Users/Диана/Documents/Ninja/app/img/katana.jpg");
+	box-shadow: 20px 20px 20px 0px rgba(190, 190, 190, 1); //тени от фоновой картинки
+	      //по Х, по У, размытие, растяжение, цвет, прозрачность
+	display: grid;
+	grid-template-columns: 1fr 1fr; //соотношение блоков горизонтально 1:1
+	grid-template-rows: 1fr 1fr; //вертикально
+	grid-column-gap: 50px; //расстояние м/у блоками горизонтально
+	grid-row-gap: 30px; //вертикально
+	padding: 30px;
+	margin: 20px 100px 0;
+}
+
+//таблицы
+.grid-cont { 
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-column-gap: 10px;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	margin: 0 100px
+}
+
+//галерея
+.grid-cont2 { 
+	display: grid;
+	grid-template-columns: 1fr 1fr; 
+	justify-items: center; //каждая картинка посреди своего места по оси Х
+	padding: 30px;
+	margin: 0 150px;
+}
+
+.img {
+	width: 80%;
+	height:  auto;
+	box-shadow: 10px 10px 5px 5px rgba(grey, 0.6); //тени от фоновой картинки
+			//по Х, по У, размытие, растяжение, цвет, прозрачность
+}
+
