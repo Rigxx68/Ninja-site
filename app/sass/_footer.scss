@@ -17,14 +17,12 @@ footer {
     text-align: center;
     background-color: $Bordo; // тёмно-красный
     color: white;
+}
 
-    ul {
-        list-style: none;
-    }
+.wrapperFooterList {
+    padding: 20px;
+}
 
-    li {
-        display: inline-block; //горизонтальный список
-        padding: 10px;
-        text-align: left;
-    }
+.footerList {
+    padding: 10px;
 }

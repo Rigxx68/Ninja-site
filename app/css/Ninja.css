@@ -1,15 +1,13 @@
-@charset "UTF-8";
 .container {
   display: flex;
   align-items: center;
-  justify-content: center;
   margin: 0 auto;
   font-size: 30px;
   background-color: #d2363e;
 }
 
 .znak {
-  margin: 10px 0 5px;
+  margin: 10px 10px 5px;
 }
 
 .feature {
@@ -19,12 +17,26 @@
   color: #d2dada;
 }
 
+.faBars {
+  margin: 10px;
+}
+.faBars a {
+  cursor: pointer;
+}
+
 a {
   color: black;
   text-decoration: none;
 }
 
 .btn {
+  cursor: pointer;
+  border: none;
+  background-color: #d2363e;
+  font-size: 30px;
+}
+
+.left-btn {
   cursor: pointer;
   border: none;
   background-color: #d2363e;
@@ -48,7 +60,7 @@ a {
   overflow: auto;
   z-index: 1;
   background-color: #d2363e;
-  padding-top: 20px;
+  margin-top: 18px;
   font-size: 25px;
 }
 .dropdown-content a {
@@ -61,6 +73,31 @@ a {
   background-color: #d2dada;
 }
 
+.left-content {
+  display: none;
+  position: absolute;
+  left: -10px;
+  text-align: left;
+  overflow: auto;
+  z-index: 1;
+  background-color: #d2363e;
+  font-size: 16px;
+  margin-top: 17px;
+}
+.left-content a {
+  color: black;
+  text-decoration: none;
+  display: block;
+  padding: 2px 5px;
+}
+.left-content a:hover {
+  background-color: #d2dada;
+}
+
+.show {
+  display: block;
+}
+
 caption {
   font-size: 22px;
   padding: 10px;
@@ -68,14 +105,6 @@ caption {
 
 table {
   border-collapse: collapse;
-}
-
-.table1, .table2 {
-  margin: 0 50px 0 100px;
-}
-
-.table3, .table4 {
-  margin: 0 100px 0 50px;
 }
 
 .table1 tr:hover td, .table3 tr:hover td {
@@ -110,9 +139,9 @@ table {
 
 .slider {
   position: relative;
-  margin: 30px 180px 0;
+  margin: 30px 13% 0;
   padding-bottom: 20px;
-  height: 320px;
+  max-height: 320px;
   text-align: center;
   overflow: hidden;
 }
@@ -121,6 +150,7 @@ table {
   height: 320px;
   box-shadow: 10px 10px 5px 5px rgba(128, 128, 128, 0.6);
   margin-bottom: 20px;
+  width: auto;
 }
 
 .slider .previous, .slider .next {
@@ -150,7 +180,7 @@ table {
 
 .slider-dots {
   text-align: center;
-  margin: 10px;
+  padding: 10px;
 }
 
 .slider-dots_item {
@@ -187,15 +217,84 @@ footer {
   background-color: #800000;
   color: white;
 }
-footer ul {
-  list-style: none;
-}
-footer li {
-  display: inline-block;
-  padding: 10px;
-  text-align: left;
+
+.wrapperFooterList {
+  padding: 20px;
 }
 
+.footerList {
+  padding: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    justify-content: center;
+  }
+  .faBars {
+    display: none;
+  }
+  .grid-cont0 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-column-gap: 50px;
+    grid-row-gap: 30px;
+  }
+  .grid-cont {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 60px;
+  }
+  .grid-cont2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 30px;
+  }
+  .footerList {
+    display: inline-block;
+    text-align: left;
+  }
+}
+@media screen and (max-width: 767px) {
+  .container {
+    justify-content: center;
+  }
+  .faBars {
+    display: none;
+  }
+  .grid-cont0 {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-row-gap: 30px;
+  }
+  .grid-cont {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-row-gap: 60px;
+  }
+  .grid-cont2 {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-row-gap: 30px;
+  }
+  .footerList {
+    display: block;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 639px) {
+  .container {
+    justify-content: center;
+  }
+  .feature {
+    display: none;
+  }
+  .faBars {
+    display: inline-block;
+    position: absolute;
+    left: 0;
+  }
+}
 html {
   scroll-behavior: smooth;
   height: 100%;
@@ -209,8 +308,9 @@ body {
 .nazv {
   font-size: 50px;
   text-align: center;
-  padding: 70px 0;
-  background-image: url("C:/Users/Диана/Documents/Ninja/app/img/katana1.jpg");
+  padding: 70px 50px;
+  background-image: url("../img/katana1.jpg");
+  background-size: cover;
 }
 
 h3 {
@@ -230,51 +330,42 @@ h3 {
 }
 
 .Oninja {
-  padding: 20px 50px;
+  padding: 20px 4%;
   text-align: justify;
   text-indent: 30px;
   color: white;
-  background-image: url(C:/Users/Диана/Documents/Ninja/app/img/nin1.jpg);
+  background-image: url(../img/nin1.jpg);
   background-size: cover;
   background-attachment: fixed;
 }
 
 .Onas {
-  padding: 20px 50px;
+  padding: 20px 0;
   text-align: justify;
 }
 
 .grid-cont0 {
-  background-image: url("C:/Users/Диана/Documents/Ninja/app/img/katana.jpg");
+  background-image: url("../img/grey.jpg");
+  background-size: cover;
   box-shadow: 20px 20px 20px 0px rgb(190, 190, 190);
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  grid-column-gap: 50px;
-  grid-row-gap: 30px;
   padding: 30px;
-  margin: 20px 100px 0;
+  margin: 20px 10% 20px;
 }
 
 .grid-cont {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-column-gap: 10px;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  margin: 0 100px;
+  padding: 30px 0px;
+  margin: 0 10%;
 }
 
 .grid-cont2 {
   display: grid;
-  grid-template-columns: 1fr 1fr;
   justify-items: center;
   padding: 30px;
-  margin: 0 150px;
+  margin: 0 10%;
 }
 
 .img {
-  width: 80%;
+  width: 100%;
   height: auto;
   box-shadow: 10px 10px 5px 5px rgba(128, 128, 128, 0.6);
 }

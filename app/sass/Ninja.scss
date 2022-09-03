@@ -3,6 +3,7 @@
 @import '_table';
 @import '_slides';
 @import '_footer';
+@import '_adapt';
 
 html {
 	scroll-behavior: smooth; //плавная прокрутка страницы при нажатии на "вверх"
@@ -18,8 +19,9 @@ body {
 .nazv { 
 	font-size: 50px;
 	text-align: center;
-	padding: 70px 0;
-	background-image: url("C:/Users/Диана/Documents/Ninja/app/img/katana1.jpg")
+	padding: 70px 50px;
+	background-image: url("../img/katana1.jpg");
+    background-size: cover;
 }
 
 //названия в начале блоков
@@ -43,56 +45,48 @@ h3 {
 
 //черный фон с ниндзя
 .Oninja { 
-	padding: 20px 50px;
+	padding: 20px 4%;
 	text-align: justify; //по ширине
 	text-indent: 30px;
 	color: white; 
-	background-image: url(C:/Users/Диана/Documents/Ninja/app/img/nin1.jpg);
+	background-image: url(../img/nin1.jpg);
 	background-size: cover; //=100% auto
 	background-attachment: fixed; //картинка стоит на месте, текст двигается
 }
 
 //блок с книжкой с белой тенью
 .Onas{ 
-	padding: 20px 50px;
+	padding: 20px 0;
 	text-align: justify;
 }
 
 //книжка с белой тенью
 .grid-cont0 { 
-	background-image: url("C:/Users/Диана/Documents/Ninja/app/img/katana.jpg");
+	background-image: url("../img/grey.jpg");
+    background-size: cover;
 	box-shadow: 20px 20px 20px 0px rgba(190, 190, 190, 1); //тени от фоновой картинки
 	      //по Х, по У, размытие, растяжение, цвет, прозрачность
-	display: grid;
-	grid-template-columns: 1fr 1fr; //соотношение блоков горизонтально 1:1
-	grid-template-rows: 1fr 1fr; //вертикально
-	grid-column-gap: 50px; //расстояние м/у блоками горизонтально
-	grid-row-gap: 30px; //вертикально
 	padding: 30px;
-	margin: 20px 100px 0;
+	margin: 20px 10% 20px;
 }
 
 //таблицы
 .grid-cont { 
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	grid-column-gap: 10px;
-	padding-top: 30px;
-	padding-bottom: 30px;
-	margin: 0 100px
+	padding: 30px 0px;
+	margin: 0 10%;
 }
 
 //галерея
 .grid-cont2 { 
 	display: grid;
-	grid-template-columns: 1fr 1fr; 
 	justify-items: center; //каждая картинка посреди своего места по оси Х
 	padding: 30px;
-	margin: 0 150px;
+	margin: 0 10%;
 }
 
+//чепарашки
 .img {
-	width: 80%;
+	width: 100%;
 	height:  auto;
 	box-shadow: 10px 10px 5px 5px rgba(grey, 0.6); //тени от фоновой картинки
 			//по Х, по У, размытие, растяжение, цвет, прозрачность

@@ -2,12 +2,15 @@
 <html>
 <head>
     <link rel="stylesheet" href="css/Ninja.css">
+    <link rel="stylesheet" href="../font-awesome-4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>
         Maestro NinjaGo
     </title>
 </head>
 <body>
-    <script src="C:/Users/Диана/Documents/Ninja/app/js/slides.js"></script>
+    <script src="../js/slides.js"></script>
+    <script src="../js/dropdown.js"></script>
     <header>
         <div class="container">
             <div class="znak">
@@ -21,14 +24,26 @@
             </div>
             <div class="feature">
                 <div class="dropdown">
-                    <button class="btn">Информация</button>
-                    <div class="dropdown-content">
+                    <button onclick="show_Menu()" class="btn">Информация</button>
+                    <div id="Dropdown" class="dropdown-content">
                         <a href="#raspisanie">Расписание</a>
                         <a href="#ceny">Цены</a>
                         <a href="#galery">Галерея</a>
                     </div> <!--dropdown-content-->
                 </div> <!--dropdown-->
             </div> <!--feature-->
+            <div class="faBars">
+                <div class="left-menu">
+                    <button onclick="showMenu()" class="btn"><i class="fa fa-bars" aria-hidden="true"></i></button>
+                    <div id="leftDropdown" class="left-content">
+                        <a href="#Oninja">О Ниндзя</a>
+                        <a href="#Onas">О нас</a>
+                        <a href="#raspisanie">Расписание</a>
+                        <a href="#ceny">Цены</a>
+                        <a href="#galery">Галерея</a>
+                    </div> <!--left-content-->
+                </div> <!--left-menu-->
+            </div><!--faBars-->
         </div> <!--container-->
     </header> 
     <div class='nazv'> <!--серый фон с катаной-->
@@ -36,7 +51,7 @@
         <br><b>Maestro NinjaGo</b>
         <p><i>В здоровом теле - здоровый дух</i></p>
     </div>
-    <!--О ФЕДЕРАЦИИ-->
+    <!--О НИНДЗЯ-->
     <div class='wrapper' id='Oninja'> <!--для перемотки-->
         <div class='Oninja'>
             <i>
@@ -52,138 +67,137 @@
                 ставшие диверсантами, непревзойдёнными шпионами и воителями, не знающими жалости, обладающие почти
                 нечеловеческими способностями, они не остановятся ни перед чем, чтобы выполнить задание.
             <p>И мы научим тех, кто хочет достичь высот древних мастеров.
+        </div> <!--Oninja-->
+    </div> <!--wrapper-->
+<!--О ФЕДЕРАЦИИ-->
+    <div class='wrapper2' id='Onas'> <!--для перемотки-->
+        <div class='Onas'>
+            <h3>О Федерации</h3>
+            <div class='grid-cont0'>
+                <div class='nin1'>
+                    Большинству людей известны лишь описания из книг средних веков и то не целиком. Наша же школа
+                    хранит множество тайных знаний в своих библиотеках, а также передаёт умения от учителя к ученику
+                    в первозданном виде.
+                </div>
+                <div class='nin2'><img src='img/nin2.jpg' style="width: 100%; height: auto;"></div>
+                <div class='nin2'><img src='img/nin3.jpg' style="width: 100%; height: auto;"></div>
+                <div class='nin1'>
+                    Изначально ниндзя были монахами-скитальцами родом из Китая. Поэтому наша школа придерживается
+                    взгляда на аскетичный образ жизни. Летние собры и круглогодичные выезды на природу с каждодневными
+                    тренировками на них способствуют развитию выносливости и физической активности.
+                </div>
+            </div> <!--grid-cont0-->
         </div> <!--Onas-->
-        <div>
-            <!--wrapper-->
-            <div class='wrapper2' id='Onas'> <!--для перемотки-->
-                <div class='Onas'>
-                    <h3>О Федерации</h3>
-                    <div class='grid-cont0'>
-                        <div class='nin1'>
-                            Большинству людей известны лишь описания из книг средних веков и то не целиком. Наша же школа
-                            хранит множество тайных знаний в своих библиотеках, а также передаёт умения от учителя к ученику
-                            в первозданном виде.
-                        </div>
-                        <div class='nin2'><img src='img/nin2.jpg' style="width: 100%; height: auto;"></div>
-                        <div class='nin2'><img src='img/nin3.jpg' style="width: 100%; height: auto;"></div>
-                        <div class='nin1'>
-                            Изначально ниндзя были монахами-скитальцами родом из Китая. Поэтому наша школа придерживается
-                            взгляда на аскетичный образ жизни. Летние собры и круглогодичные выезды на природу с каждодневными
-                            тренировками на них способствуют развитию выносливости и физической активности.
-                        </div>
-                    </div> <!--grid-cont0-->
-                </div> <!--Oninja-->
-            </div> <!--wrapper2-->
-            <!--РАСПИСАНИЕ-->
-            <div class='wrapper' id='raspisanie'> <!--для перемотки-->
-                <h3>Западный зал</h3>
-                <div class='grid-cont'> <!--for grid-->
-                    <table class='table1'>
-                        <caption>Дети до 12 лет</caption> <!--название таблицы-->
-                        <tr><th>День недели</th><th>Часы работы</th></tr> <!--строка с заголовочными столбцами-->
-                        <tr><td>Понедельник</td><td>12.00 - 13.00</td></tr> <!--строка с остальными столбцами-->
-                        <tr><td>Среда</td><td>12.00 - 13.00</td></tr>
-                        <tr><td>Пятница</td><td>12.00 - 13.00</td></tr>
-                    </table>
-                    <table class='table3'>
-                        <caption>Взрослые</caption>
-                        <tr><th>День недели</th><th>Часы работы</th></tr> <!--строка с заголовочными столбцами-->
-                        <tr><td>Понедельник</td><td>19.30 - 21.00</td></tr> <!--строка с остальными столбцами-->
-                        <tr><td>Среда</td><td>19.30 - 21.00</td></tr>
-                        <tr><td>Пятница</td><td>19.30 - 21.00</td></tr>
-                    </table>
-                </div> <!--grid-cont-->
-                <h3>Восточный зал</h3>
-                <div class='grid-cont'> <!--for grid-->
-                    <table class='table1'>
-                        <caption>Дети до 12 лет</caption>
-                        <tr><th>День недели</th><th>Часы работы</th></tr> <!--строка с заголовочными столбцами-->
-                        <tr><td>Вторник</td><td>12.00 - 13.00</td></tr> <!--строка с остальными столбцами-->
-                        <tr><td>Четверг</td><td>12.00 - 13.00</td></tr>
-                        <tr><td>Суббота</td><td>12.00 - 13.00</td></tr>
-                    </table>
-                    <table class='table3'>
-                        <caption>Взрослые</caption>
-                        <tr><th>День недели</th><th>Часы работы</th></tr> <!--строка с заголовочными столбцами-->
-                        <tr><td>Вторник</td><td>19.30 - 21.00</td></tr> <!--строка с остальными столбцами-->
-                        <tr><td>Четверг</td><td>19.30 - 21.00</td></tr>
-                        <tr><td>Суббота</td><td>19.30 - 21.00</td></tr>
-                    </table>
-                </div> <!--grid-cont-->
-                <div style='padding: 0 0 20px 20px; font-size: 20px;'>
-                    <i>*Расписание для индивидуальных тренировок оговаривается отдельно.</i>
-                </div>
-            </div> <!--wrapper-->
-            <!--ЦЕНЫ-->
-            <div class='wrapper2' id='ceny'> <!--для перемотки-->
-                <h3>Цены</h3>
-                <div class='grid-cont'> <!--for grid-->
-                    <table class='table2'>
-                        <caption>Дети до 12 лет</caption>
-                        <tr><th>Количество занятий в месяц</th><th>Цена</th></tr> <!--строка с заголовочными столбцами-->
-                        <tr><td>4 в группе</td><td>2600</td></tr> <!--строка с остальными столбцами-->
-                        <tr><td>8 в группе</td><td>3000</td></tr>
-                        <tr><td>12 в группе</td><td>3200</td></tr>
-                        <tr><td>4 индивидуальных</td><td>3000</td></tr> <!--строка с остальными столбцами-->
-                        <tr><td>8 индивидуальных</td><td>3400</td></tr>
-                        <tr><td>12 индивидуальных</td><td>3600</td></tr>
-                    </table>
-                    <table class='table4'>
-                        <caption>Взрослые</caption>
-                        <tr><th>Количество занятий в месяц</th><th>Цена</th></tr> <!--строка с заголовочными столбцами-->
-                        <tr><td>4 в группе</td><td>2800</td></tr> <!--строка с остальными столбцами-->
-                        <tr><td>8 в группе</td><td>3200</td></tr>
-                        <tr><td>12 в группе</td><td>3400</td></tr>
-                        <tr><td>4 индивидуальных</td><td>3200</td></tr> <!--строка с остальными столбцами-->
-                        <tr><td>8 индивидуальных</td><td>3600</td></tr>
-                        <tr><td>12 индивидуальных</td><td>3800</td></tr>
-                    </table>
-                </div> <!--grid-cont-->
-            </div>  <!--wrapper2-->
-            <!--ГАЛЕРЕЯ-->
-            <div class='wrapper' id='galery'> <!--для перемотки-->
-               <h3>Наши преподаватели</h3>
-                <div class='grid-cont2'> <!--for grid-->
-                    <img class='img' src='img/Raf.jpg'>
-                    <img class='img' src='img/Mik.jpg'>
-                </div> <!--grid-cont2-->
-                <h3>Наши ученики</h3>
-                <div class="slider">
-                    <div class='item'><img src='img/gal1.jpeg'></div>
-                    <div class='item'><img src='img/gal2.jpg'></div>
-                    <div class='item'><img src='img/gal3.jpeg'></div>
-                    <div class='item'><img src='img/gal4.jpeg'></div>
-                    <div class='item'><img src='img/gal5.jpeg'></div>
-                    <!-- Кнопки-стрелочки -->
-                    <a class="previous" onclick="previousSlide()">&#10094;</a>
-                    <a class="next" onclick="nextSlide()">&#10095;</a>
-                </div> <!--slider-->
-                <div class="slider-dots">
-                    <span class="slider-dots_item active" onclick="currentSlide(1)"></span> <!--у span display: inline в отличие от div-->
-                    <span class="slider-dots_item" onclick="currentSlide(2)"></span> <!--можно нажимать на кружочки а не стрелки-->
-                    <span class="slider-dots_item" onclick="currentSlide(3)"></span>
-                    <span class="slider-dots_item" onclick="currentSlide(4)"></span>
-                    <span class="slider-dots_item" onclick="currentSlide(5)"></span>
-                </div>
-            </div> <!--wrapper-->
-            <footer>
-                <div id='top'><a href="#">&#9650;</a></div>
-                <ul>
-                    <li>
-                        Западный зал
-                        <br>Телефон +78889991122
-                        <br>Адрес ул. Сатанинская, 78
-                    </li>
-                    <li>
-                        Восточный зал
-                        <br>Телефон +788899911233
-                        <br>Адрес ул. Богодельня, 34
-                    </li>
-                </ul>
-                <div style="font-size: 15px; center; padding-bottom: 20px">
-                    &copy; Информация о ниндзя нагло слизана со статей в интернете
-                </div>
-
-            </footer>
+    </div> <!--wrapper2-->
+    <!--РАСПИСАНИЕ-->
+    <div class='wrapper' id='raspisanie'> <!--для перемотки-->
+        <h3>Западный зал</h3>
+        <div class='grid-cont'> <!--for grid-->
+            <table class='table1'>
+                <caption>Дети до 12 лет</caption> <!--название таблицы-->
+                <tr><th>День недели</th><th>Часы работы</th></tr> <!--строка с заголовочными столбцами-->
+                <tr><td>Понедельник</td><td>12.00 - 13.00</td></tr> <!--строка с остальными столбцами-->
+                <tr><td>Среда</td><td>12.00 - 13.00</td></tr>
+                <tr><td>Пятница</td><td>12.00 - 13.00</td></tr>
+            </table>
+            <table class='table3'>
+                <caption>Взрослые</caption>
+                <tr><th>День недели</th><th>Часы работы</th></tr> <!--строка с заголовочными столбцами-->
+                <tr><td>Понедельник</td><td>19.30 - 21.00</td></tr> <!--строка с остальными столбцами-->
+                <tr><td>Среда</td><td>19.30 - 21.00</td></tr>
+                <tr><td>Пятница</td><td>19.30 - 21.00</td></tr>
+            </table>
+        </div> <!--grid-cont-->
+        <h3>Восточный зал</h3>
+        <div class='grid-cont'> <!--for grid-->
+            <table class='table1'>
+                <caption>Дети до 12 лет</caption>
+                <tr><th>День недели</th><th>Часы работы</th></tr> <!--строка с заголовочными столбцами-->
+                <tr><td>Вторник</td><td>12.00 - 13.00</td></tr> <!--строка с остальными столбцами-->
+                <tr><td>Четверг</td><td>12.00 - 13.00</td></tr>
+                <tr><td>Суббота</td><td>12.00 - 13.00</td></tr>
+            </table>
+            <table class='table3'>
+                <caption>Взрослые</caption>
+                <tr><th>День недели</th><th>Часы работы</th></tr> <!--строка с заголовочными столбцами-->
+                <tr><td>Вторник</td><td>19.30 - 21.00</td></tr> <!--строка с остальными столбцами-->
+                <tr><td>Четверг</td><td>19.30 - 21.00</td></tr>
+                <tr><td>Суббота</td><td>19.30 - 21.00</td></tr>
+            </table>
+        </div> <!--grid-cont-->
+        <div style='padding: 0 0 20px 20px; font-size: 20px;'>
+            <i>*Расписание для индивидуальных тренировок оговаривается отдельно.</i>
+        </div>
+    </div> <!--wrapper-->
+    <!--ЦЕНЫ-->
+    <div class='wrapper2' id='ceny'> <!--для перемотки-->
+        <h3>Цены</h3>
+        <div class='grid-cont'> <!--for grid-->
+            <table class='table2'>
+                <caption>Дети до 12 лет</caption>
+                <tr><th>Количество занятий в месяц</th><th>Цена</th></tr> <!--строка с заголовочными столбцами-->
+                <tr><td>4 в группе</td><td>2600</td></tr> <!--строка с остальными столбцами-->
+                <tr><td>8 в группе</td><td>3000</td></tr>
+                <tr><td>12 в группе</td><td>3200</td></tr>
+                <tr><td>4 индивидуальных</td><td>3000</td></tr> <!--строка с остальными столбцами-->
+                <tr><td>8 индивидуальных</td><td>3400</td></tr>
+                <tr><td>12 индивидуальных</td><td>3600</td></tr>
+            </table>
+            <table class='table4'>
+                <caption>Взрослые</caption>
+                <tr><th>Количество занятий в месяц</th><th>Цена</th></tr> <!--строка с заголовочными столбцами-->
+                <tr><td>4 в группе</td><td>2800</td></tr> <!--строка с остальными столбцами-->
+                <tr><td>8 в группе</td><td>3200</td></tr>
+                <tr><td>12 в группе</td><td>3400</td></tr>
+                <tr><td>4 индивидуальных</td><td>3200</td></tr> <!--строка с остальными столбцами-->
+                <tr><td>8 индивидуальных</td><td>3600</td></tr>
+                <tr><td>12 индивидуальных</td><td>3800</td></tr>
+            </table>
+        </div> <!--grid-cont-->
+    </div>  <!--wrapper2-->
+    <!--ГАЛЕРЕЯ-->
+    <div class='wrapper' id='galery'> <!--для перемотки-->
+       <h3>Наши преподаватели</h3>
+        <div class='grid-cont2'> <!--for grid-->
+            <img class='img' src='img/Raf.jpg'>
+            <img class='img' src='img/Mik.jpg'>
+        </div> <!--grid-cont2-->
+        <h3>Наши ученики</h3>
+        <div class="slider">
+            <div class='item'><img src='img/gal1.jpeg'></div>
+            <div class='item'><img src='img/gal2.jpg'></div>
+            <div class='item'><img src='img/gal3.jpeg'></div>
+            <div class='item'><img src='img/gal4.jpeg'></div>
+            <div class='item'><img src='img/gal5.jpeg'></div>
+            <!-- Кнопки-стрелочки -->
+            <a class="previous" onclick="previousSlide()">&#10094;</a>
+            <a class="next" onclick="nextSlide()">&#10095;</a>
+        </div> <!--slider-->
+        <div class="slider-dots">
+            <span class="slider-dots_item active" onclick="currentSlide(1)"></span> <!--у span display: inline в отличие от div-->
+            <span class="slider-dots_item" onclick="currentSlide(2)"></span> <!--можно нажимать на кружочки а не стрелки-->
+            <span class="slider-dots_item" onclick="currentSlide(3)"></span>
+            <span class="slider-dots_item" onclick="currentSlide(4)"></span>
+            <span class="slider-dots_item" onclick="currentSlide(5)"></span>
+        </div>
+    </div> <!--wrapper-->
+    <footer>
+        <div id='top'><a href="#">&#9650;</a></div>
+        <div class='wrapperFooterList'>
+            <div class="footerList">
+                Западный зал
+                <br>Телефон +78889991122
+                <br>Адрес ул. Сатанинская, 78
+            </div>
+            <div class="footerList">
+                Восточный зал
+                <br>Телефон +788899911233
+                <br>Адрес ул. Богодельня, 34
+            </div>
+        </div>
+        <div style="font-size: 15px; center; padding-bottom: 20px">
+            &copy; Информация о ниндзя нагло слизана со статей в интернете
+        </div>
+    </footer>
 </body>
 </html>

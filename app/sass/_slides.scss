@@ -3,9 +3,9 @@
 //общий блок
 .slider { 
     position: relative; // Положение элемента устанавливается относительно его исходной позиции
-    margin: 30px 180px 0; //блок в центре(auto)
+    margin: 30px 13% 0; //блок в центре(auto)
     padding-bottom: 20px; //отступ для тени (1)
-    height: 320px;
+    max-height: 320px;
     text-align: center;
     overflow: hidden; //спрячем остальные картинки
 }
@@ -16,6 +16,7 @@
     box-shadow: 10px 10px 5px 5px rgba(grey, 0.6); //тень от картинки
 			//по Х, по У, размытие, растяжение, цвет, прозрачность
     margin-bottom: 20px; //отступ для тени (2)
+    width: auto;
 }
 
 // стрелки назад и вперёд
@@ -54,7 +55,7 @@
 // Кружочки
 .slider-dots {
     text-align: center;
-    margin: 10px
+    padding: 10px;
 }
 
 .slider-dots_item {
