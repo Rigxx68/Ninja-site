@@ -60,7 +60,7 @@ a {
   overflow: auto;
   z-index: 1;
   background-color: #d2363e;
-  margin-top: 18px;
+  padding-top: 18px;
   font-size: 25px;
 }
 .dropdown-content a {
@@ -139,7 +139,7 @@ table {
 
 .slider {
   position: relative;
-  margin: 30px 13% 0;
+  margin: 30px 10% 0;
   padding-bottom: 20px;
   max-height: 320px;
   text-align: center;
@@ -147,9 +147,8 @@ table {
 }
 
 .slider .item img {
-  height: 320px;
   box-shadow: 10px 10px 5px 5px rgba(128, 128, 128, 0.6);
-  margin-bottom: 20px;
+  margin: 0 20px 20px 0;
   width: auto;
 }
 
@@ -227,6 +226,16 @@ footer {
 }
 
 @media screen and (min-width: 768px) {
+  body {
+    font-size: 18px;
+  }
+  .nazv {
+    font-size: 50px;
+    padding: 70px 50px;
+  }
+  h3 {
+    font-size: 25px;
+  }
   .container {
     justify-content: center;
   }
@@ -250,12 +259,28 @@ footer {
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 30px;
   }
+  .slider {
+    max-height: 320px;
+  }
+  .slider .item img {
+    height: 320px;
+  }
   .footerList {
     display: inline-block;
     text-align: left;
   }
 }
 @media screen and (max-width: 767px) {
+  body {
+    font-size: 18px;
+  }
+  .nazv {
+    font-size: 50px;
+    padding: 70px 50px;
+  }
+  h3 {
+    font-size: 25px;
+  }
   .container {
     justify-content: center;
   }
@@ -277,12 +302,28 @@ footer {
     grid-template-rows: 1fr 1fr;
     grid-row-gap: 30px;
   }
+  .slider {
+    max-height: 280px;
+  }
+  .slider .item img {
+    height: 280px;
+  }
   .footerList {
     display: block;
     text-align: center;
   }
 }
 @media screen and (max-width: 639px) {
+  body {
+    font-size: 18px;
+  }
+  .nazv {
+    font-size: 50px;
+    padding: 70px 50px;
+  }
+  h3 {
+    font-size: 25px;
+  }
   .container {
     justify-content: center;
   }
@@ -294,6 +335,42 @@ footer {
     position: absolute;
     left: 0;
   }
+  .slider {
+    max-height: 120px;
+  }
+  .slider .item img {
+    height: 120px;
+  }
+}
+@media screen and (max-width: 359px) {
+  body {
+    font-size: 10px;
+  }
+  .nazv {
+    font-size: 30px;
+    padding: 35px 25px;
+  }
+  h3 {
+    font-size: 17px;
+  }
+  caption {
+    font-size: 14px;
+  }
+  .slider {
+    max-height: 100px;
+  }
+  .slider .item img {
+    height: 100px;
+  }
+  .slider .previous, .slider .next {
+    margin-top: -30px;
+    padding: 10px;
+    font-size: 20px;
+  }
+  #top a {
+    color: white;
+    font-size: 25px;
+  }
 }
 html {
   scroll-behavior: smooth;
@@ -302,13 +379,11 @@ html {
 
 body {
   margin: 0;
-  font: 18px sans-serif;
+  font-family: sans-serif;
 }
 
 .nazv {
-  font-size: 50px;
   text-align: center;
-  padding: 70px 50px;
   background-image: url("../img/katana1.jpg");
   background-size: cover;
 }
@@ -317,7 +392,6 @@ h3 {
   text-align: center;
   text-indent: 0px;
   padding-top: 20px;
-  font-size: 25px;
   margin: 0;
 }
 

@@ -47,13 +47,6 @@ a {
     font-size: 30px;
 }
 
-.left-btn { 
-    cursor: pointer;
-    border: none;
-    background-color: $DarkRed;
-    font-size: 30px;
-}
-
 .dropdown {
 
     a:hover {
@@ -77,7 +70,7 @@ a {
     overflow: auto; //содержимое выпадающего списка. Полосы прокрутки - при необходимости
     z-index: 1; //контент закрывает собой тот, что за ним
     background-color: $DarkRed;
-    margin-top: 18px;
+    padding-top: 18px;
     font-size: 25px;
 
     a {

@@ -1,4 +1,19 @@
 @media screen and (min-width: 768px) {
+    body{
+        font-size: 18px;
+    }
+    
+    //слова на сером фоне с катаной под шапкой
+    .nazv { 
+        font-size: 50px;
+        padding: 70px 50px;
+    }
+    
+    //названия в начале блоков
+    h3 {
+        font-size: 25px;
+    }
+    
     .container {
         justify-content: center; //горизонтально
     }
@@ -30,6 +45,16 @@
         grid-column-gap: 30px;
     }
     
+    //общий блок
+    .slider { 
+        max-height: 320px;
+    }
+    
+    //картинки
+    .slider .item img { 
+        height: 320px;
+    }
+    
     //список в подвале
      .footerList {
         display: inline-block;
@@ -38,6 +63,21 @@
 }
 
 @media screen and (max-width: 767px) {
+    body{
+        font-size: 18px;
+    }
+    
+    //слова на сером фоне с катаной под шапкой
+    .nazv { 
+        font-size: 50px;
+        padding: 70px 50px;
+    }
+    
+    //названия в начале блоков
+    h3 {
+        font-size: 25px;
+    }
+    
     .container {
         justify-content: center; //горизонтально
     }
@@ -67,6 +107,15 @@
         grid-row-gap: 30px;
     }
     
+    //общий блок
+    .slider { 
+        max-height: 280px;
+    }
+    //картинки
+    .slider .item img { 
+        height: 280px;
+    }
+    
     //список в подвале
      .footerList {
         display: block;
@@ -75,6 +124,21 @@
 }
 
 @media screen and (max-width: 639px) {
+    body{
+        font-size: 18px;
+    }
+    
+    //слова на сером фоне с катаной под шапкой
+    .nazv { 
+        font-size: 50px;
+        padding: 70px 50px;
+    }
+    
+    //названия в начале блоков
+    h3 {
+        font-size: 25px;
+    }
+    
     .container {
         justify-content: center; //горизонтально
     }
@@ -86,5 +150,63 @@
         display: inline-block;
         position: absolute;
         left: 0
+    }
+    
+    //общий блок
+    .slider { 
+        max-height: 120px;
+    }
+    
+    //картинки
+    .slider .item img { 
+        height: 120px;
+    }
+}
+
+@media screen and (max-width: 359px) {
+    body{
+        font-size: 10px;
+    }
+    
+    //слова на сером фоне с катаной под шапкой
+    .nazv { 
+        font-size: 30px;
+        padding: 35px 25px;
+    }
+    
+    //названия в начале блоков
+    h3 {
+        font-size: 17px;
+    }
+    
+    //названия таблиц
+    caption {
+        font-size: 14px;
+    }
+    
+    //общий блок
+    .slider { 
+        max-height: 100px;
+    }
+    
+    //картинки
+    .slider .item img { 
+        height: 100px;
+    }
+    
+    // стрелки назад и вперёд
+    .slider .previous, .slider .next {
+        margin-top: -30px; //чтобы посередине вертикали
+        padding: 10px; //от стрелки до края её фона
+        // Оформление самих кнопок 
+        font-size: 20px;
+    }
+    
+    //кнопочка 'вверх'
+    #top { 
+        a {
+            color: white;
+            font-size: 25px
+        }
     }
 }

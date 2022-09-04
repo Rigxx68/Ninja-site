@@ -3,7 +3,7 @@
 //общий блок
 .slider { 
     position: relative; // Положение элемента устанавливается относительно его исходной позиции
-    margin: 30px 13% 0; //блок в центре(auto)
+    margin: 30px 10% 0; //блок в центре(auto)
     padding-bottom: 20px; //отступ для тени (1)
     max-height: 320px;
     text-align: center;
@@ -12,10 +12,9 @@
 
 //картинки
 .slider .item img { 
-    height: 320px;
     box-shadow: 10px 10px 5px 5px rgba(grey, 0.6); //тень от картинки
 			//по Х, по У, размытие, растяжение, цвет, прозрачность
-    margin-bottom: 20px; //отступ для тени (2)
+    margin: 0 20px 20px 0; //отступ для тени (2)
     width: auto;
 }
 
