@@ -1,0 +1,46 @@
+//черный фон с ниндзя
+.signUp { 
+	padding: 20px 4%;
+	text-align: justify; //по ширине
+	background-image: url(../img/nin1.jpg);
+	background-size: cover; //=100% auto
+	background-attachment: fixed; //картинка стоит на месте, текст двигается
+}
+
+//блок с полями
+form {
+    margin: 0 10%;
+    display: flex;
+    flex-direction: column;
+}
+
+//каждое поле
+.contact {
+    width: 100%;
+    max-width: 400px;
+    box-sizing: border-box;
+    border: none;
+    &:hover, &:focus {
+        box-shadow: inset 0 0 3px 3px $DarkGrey;
+        font-weight: 600;
+    }
+}
+
+//сообщение
+.mailText{
+    height: 150px;
+}
+
+//'отправить'
+.submit{
+    cursor: pointer;
+    background-color: $Bordo;
+    color: white;
+    &:hover {
+        box-shadow: inset 0 0 5px 3px $DarkBordo;
+        font-weight: 600;
+    }
+    &:active {
+        background-color: $DarkBordo;
+    }
+}

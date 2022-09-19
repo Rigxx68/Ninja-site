@@ -40,7 +40,7 @@ a {
 }
 
 //кнопка "информация"
-.btn { 
+.btn, .left_btn { 
     cursor: pointer;
     border: none;
     background-color: $DarkRed;
@@ -55,10 +55,6 @@ a {
 
     &:hover .btn { // цвет букв кнопки раскрывающегося списка когда список раскрывается
         color: $GreyBlue;
-    }
-
-    &:hover .dropdown-content { // Показать выпадающее меню при наведении курсора 
-        display: block;
     }
 }
 
@@ -105,8 +101,4 @@ a {
             background-color: $GreyBlue
         }
     }
-}
-
-.show {
-    display: block;
 }

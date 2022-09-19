@@ -1,7 +1,7 @@
 @import '_colors';
 @import '_header';
 @import '_table';
-@import '_slides';
+@import '_signUp';
 @import '_footer';
 @import '_adapt';
 
@@ -32,7 +32,7 @@ h3 {
 
 //синий фон
 .wrapper{ 
-		background-color: $GreyBlue;
+    background-color: $GreyBlue;
 }
 
 //красный фон
@@ -53,7 +53,7 @@ h3 {
 
 //блок с книжкой с белой тенью
 .Onas{ 
-	padding: 20px 0;
+	padding: 0 0 20px 0;
 	text-align: justify;
 }
 
@@ -64,12 +64,12 @@ h3 {
 	box-shadow: 20px 20px 20px 0px rgba(190, 190, 190, 1); //тени от фоновой картинки
 	      //по Х, по У, размытие, растяжение, цвет, прозрачность
 	padding: 30px;
-	margin: 20px 10% 20px;
+	margin: 20px 10%;
 }
 
 //таблицы
 .grid-cont { 
-	padding: 30px 0px;
+	padding: 3% 0px;
 	margin: 0 10%;
 }
 
@@ -77,7 +77,7 @@ h3 {
 .grid-cont2 { 
 	display: grid;
 	justify-items: center; //каждая картинка посреди своего места по оси Х
-	padding: 30px;
+	padding: 3%;
 	margin: 0 10%;
 }
 

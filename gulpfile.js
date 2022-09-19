@@ -24,9 +24,16 @@ gulp.task('sass', function () { // Создаем таск "sass"
         .pipe(browserSync.reload({ stream: true })) // Обновляем CSS на странице при изменени
 });
 
-gulp.task('watch', function () {
-    gulp.watch('app/sass/**/*.scss', gulp.parallel('sass')); // Наблюдение за sass файлами
-    gulp.watch('app/**/*.html', gulp.parallel('code')); // Наблюдение за HTML файлами 
+gulp.task('js', function () { 
+    return gulp.src('app/js/**/*.js')
+        .pipe(browserSync.reload({ stream: true }))
 });
-gulp.task('default', gulp.parallel('browser-sync', 'code', 'sass', 'watch'));
+
+// Наблюдение за файлами
+gulp.task('watch', function () {
+    gulp.watch('app/sass/**/*.scss', gulp.parallel('sass')); 
+    gulp.watch('app/**/*.html', gulp.parallel('code'));
+    gulp.watch('app/js/**/*.js', gulp.parallel('js')); 
+});
+gulp.task('default', gulp.parallel('browser-sync', 'code', 'sass', 'js','watch'));
 

@@ -2,15 +2,18 @@
 <html>
 <head>
     <link rel="stylesheet" href="css/Ninja.css">
+    <link rel="stylesheet" href="css/nivo-slider.css">
+    <link rel="stylesheet" href="themes/default/default.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>
         Maestro NinjaGo
     </title>
-</head>
-<body>
-    <script src="js/slides.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/jquery.nivo.slider.pack.js"></script>
     <script src="js/dropdown.js"></script>
     <script src="https://use.fontawesome.com/7172c358fb.js"></script>
+</head>
+<body>
     <header>
         <div class="container">
             <div class="znak">
@@ -25,22 +28,26 @@
             <div class="feature">
                 <div class="dropdown">
                     <button onclick="show_Menu()" class="btn">Информация</button>
-                    <div id="Dropdown" class="dropdown-content">
+                    <div id="Dropdown" class="dropdown-content show">
                         <a href="#raspisanie">Расписание</a>
                         <a href="#ceny">Цены</a>
-                        <a href="#galery">Галерея</a>
+                        <a  href="#galery">Галерея</a>
                     </div> <!--dropdown-content-->
                 </div> <!--dropdown-->
             </div> <!--feature-->
+            <div class="feature">
+                <a href="#Join">Запись</a>
+            </div>
             <div class="faBars">
                 <div class="left-menu">
-                    <button onclick="showMenu()" class="btn"><i class="fa fa-bars" aria-hidden="true"></i></button>
-                    <div id="leftDropdown" class="left-content">
+                    <button onclick="showMenu()" class="left_btn"><i class="fa fa-bars" aria-hidden="true"></i></button>
+                    <div id="leftDropdown" class="left-content show">
                         <a href="#Oninja">О Ниндзя</a>
                         <a href="#Onas">О нас</a>
                         <a href="#raspisanie">Расписание</a>
                         <a href="#ceny">Цены</a>
                         <a href="#galery">Галерея</a>
+                        <a href="#Join">Запись</a>
                     </div> <!--left-content-->
                 </div> <!--left-menu-->
             </div><!--faBars-->
@@ -164,39 +171,52 @@
         </div> <!--grid-cont2-->
         <h3>Наши ученики</h3>
         <div class="slider">
-            <div class='item'><img src='img/gal1.jpeg'></div>
-            <div class='item'><img src='img/gal2.jpg'></div>
-            <div class='item'><img src='img/gal3.jpeg'></div>
-            <div class='item'><img src='img/gal4.jpeg'></div>
-            <div class='item'><img src='img/gal5.jpeg'></div>
-            <!-- Кнопки-стрелочки -->
-            <a class="previous" onclick="previousSlide()">&#10094;</a>
-            <a class="next" onclick="nextSlide()">&#10095;</a>
-        </div> <!--slider-->
-        <div class="slider-dots">
-            <span class="slider-dots_item active" onclick="currentSlide(1)"></span> <!--у span display: inline в отличие от div-->
-            <span class="slider-dots_item" onclick="currentSlide(2)"></span> <!--можно нажимать на кружочки а не стрелки-->
-            <span class="slider-dots_item" onclick="currentSlide(3)"></span>
-            <span class="slider-dots_item" onclick="currentSlide(4)"></span>
-            <span class="slider-dots_item" onclick="currentSlide(5)"></span>
+            <div class="theme-default">
+                <div id="slider" class="nivoSlider">
+                    <img src="img/gal1.jpeg" alt="" />
+                    <img src="img/gal2.jpg" alt="" />
+                    <img src="img/gal3.jpeg" alt="" />
+                    <img src="img/gal4.jpeg" alt="" />
+                    <img src="img/gal5.jpeg" alt="" />
+                </div>
+            </div>
         </div>
+        <script>
+        $(window).on('load', function() {
+            $('#slider').nivoSlider(); 
+        });
+        </script>
     </div> <!--wrapper-->
+    <!--ЗАПИСЬ-->
+    <div class='wrapper' id='Join'> <!--для перемотки-->
+        <div class='signUp'>
+            <form>
+                <input class='contact' type="text" placeholder='Полное имя'>
+                <input class='contact' type="email" placeholder='Email'>
+                <input class='contact' type="tel" maxlength='11' placeholder='79002343234'>
+                <textarea class='contact mailText' placeholder='Напишите Ваше сообщение...'></textarea>
+                <input class='contact submit' type="submit" value="Записаться">
+            </form>
+        </div>
+    </div>
     <footer>
         <div id='top'><a href="#">&#9650;</a></div>
         <div class='wrapperFooterList'>
             <div class="footerList">
-                Западный зал
-                <br>Телефон +78889991122
-                <br>Адрес ул. Сатанинская, 78
+                <b>Западный зал</b>
+                <br>
+                <br><i class="fa fa-phone" aria-hidden="true"></i> +7(888)999-11-22
+                <br><i class="fa fa-map-marker" aria-hidden="true"></i> ул. Сатанинская, 78
             </div>
             <div class="footerList">
-                Восточный зал
-                <br>Телефон +788899911233
-                <br>Адрес ул. Богодельня, 34
+                <b>Восточный зал</b>
+                <br>
+                <br><i class="fa fa-phone" aria-hidden="true"></i> +7(888)999-11-23
+                <br><i class="fa fa-map-marker" aria-hidden="true"></i> ул. Богодельня, 34
             </div>
         </div>
-        <div style="font-size: 15px; center; padding-bottom: 20px">
-            &copy; Информация о ниндзя нагло слизана со статей в интернете
+        <div style="font-size: 15px; padding: 0 20px 20px">
+            &copy; Ничто нам не принадлежит, и весь мир - ничто
         </div>
     </footer>
 </body>
